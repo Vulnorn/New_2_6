@@ -20,6 +20,7 @@
             double ratioEurToUsd = 0.5;
             double ratioUsdToRub = 0.2;
             double ratioUsdToEur = 2;
+            double money;
             int minCurrency = 1000;
             int maxCurrency = 10000;
             bool isWork = true;
@@ -32,7 +33,7 @@
             while (isWork)
             {
                 Console.WriteLine($"На вашем баллансе находится Рублей - {userRub}; Долларов - {userUsd}; Евро - {userEur}\n" +
-                    $"{CommandСonvertRubToEur} - Перевести рубли в евро.\n" +
+                    $"{CommandСonvertRubToEur}- Перевести рубли в евро.\n" +
                     $"{CommandСonvertRubToUsd}- Перевести рубли в доллары.\n" +
                     $"{CommandСonvertEurToRub}- Перевести евро в рубли.\n" +
                     $"{CommandСonvertEurToUsd}- Перевести евро в доллары.\n" +
@@ -45,33 +46,93 @@
                 switch (userInput)
                 {
                     case CommandСonvertRubToEur:
+                        Console.Write("$Введите сумму для перевода: ");
+                        money = Convert.ToDouble( Console.ReadLine());
+
+                        if (money < userRub)
+                        { 
                         userEur += userRub / ratioRubToEur;
-                        userRub -= userRub;
+                        userRub -= money;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"У Вса не достаточно средств");
+                        }
                         break;
 
                     case CommandСonvertRubToUsd:
-                        userUsd += userRub / ratioRubToUsd;
-                        userRub -= userRub;
+                        Console.Write("$Введите сумму для перевода: ");
+                        money = Convert.ToDouble(Console.ReadLine());
+
+                        if (money < userRub)
+                        {
+                            userUsd += userRub / ratioRubToUsd;
+                            userRub -= money;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"У Вса не достаточно средств");
+                        }
                         break;
 
                     case CommandСonvertEurToRub:
-                        userRub += userEur / ratioEurToRub;
-                        userEur -= userEur;
+                        Console.Write("$Введите сумму для перевода: ");
+                        money = Convert.ToDouble(Console.ReadLine());
+
+                        if (money < userEur)
+                        {
+                            userRub += userEur / ratioEurToRub;
+                            userEur -= money;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"У Вса не достаточно средств");
+                        }
                         break;
 
                     case CommandСonvertEurToUsd:
-                        userUsd += userEur / ratioEurToUsd;
-                        userEur -= userEur;
+                        Console.Write("$Введите сумму для перевода: ");
+                        money = Convert.ToDouble(Console.ReadLine());
+
+                        if (money < userEur)
+                        {
+                            userUsd += userEur / ratioEurToUsd;
+                            userEur -= money;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"У Вса не достаточно средств");
+                        }
                         break;
 
                     case CommandСonvertUsdToRub:
-                        userRub += userUsd / ratioUsdToRub;
-                        userUsd -= userUsd;
+                        Console.Write("$Введите сумму для перевода: ");
+                        money = Convert.ToDouble(Console.ReadLine());
+
+                        if (money < userUsd)
+                        {
+                            userRub += userUsd / ratioUsdToRub;
+                            userUsd -= money;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"У Вса не достаточно средств");
+                        }
                         break;
 
                     case CommandСonvertUsdToEur:
-                        userEur += userUsd / ratioUsdToEur;
-                        userUsd -= userUsd;
+                        Console.Write("$Введите сумму для перевода: ");
+                        money = Convert.ToDouble(Console.ReadLine());
+
+                        if (money < userUsd)
+                        {
+                            userEur += userUsd / ratioUsdToEur;
+                            userUsd -= money;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"У Вса не достаточно средств");
+                        }
                         break;
 
                     case CommandExite:
