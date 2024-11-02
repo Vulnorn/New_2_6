@@ -49,7 +49,7 @@
                         Console.Write("$Введите сумму для перевода: ");
                         money = Convert.ToDouble( Console.ReadLine());
 
-                        if (money < userRub)
+                        if (money <= userRub)
                         { 
                         userEur += userRub / ratioRubToEur;
                         userRub -= money;
@@ -64,7 +64,7 @@
                         Console.Write("$Введите сумму для перевода: ");
                         money = Convert.ToDouble(Console.ReadLine());
 
-                        if (money < userRub)
+                        if (money <= userRub)
                         {
                             userUsd += userRub / ratioRubToUsd;
                             userRub -= money;
@@ -79,7 +79,7 @@
                         Console.Write("$Введите сумму для перевода: ");
                         money = Convert.ToDouble(Console.ReadLine());
 
-                        if (money < userEur)
+                        if (money <= userEur)
                         {
                             userRub += userEur / ratioEurToRub;
                             userEur -= money;
@@ -94,7 +94,7 @@
                         Console.Write("$Введите сумму для перевода: ");
                         money = Convert.ToDouble(Console.ReadLine());
 
-                        if (money < userEur)
+                        if (money <= userEur)
                         {
                             userUsd += userEur / ratioEurToUsd;
                             userEur -= money;
@@ -109,7 +109,7 @@
                         Console.Write("$Введите сумму для перевода: ");
                         money = Convert.ToDouble(Console.ReadLine());
 
-                        if (money < userUsd)
+                        if (money <= userUsd)
                         {
                             userRub += userUsd / ratioUsdToRub;
                             userUsd -= money;
@@ -124,7 +124,7 @@
                         Console.Write("$Введите сумму для перевода: ");
                         money = Convert.ToDouble(Console.ReadLine());
 
-                        if (money < userUsd)
+                        if (money <= userUsd)
                         {
                             userEur += userUsd / ratioUsdToEur;
                             userUsd -= money;
