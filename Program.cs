@@ -4,8 +4,6 @@
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-
             const string CommandСonvertRubToEur = "1";
             const string CommandСonvertRubToUsd = "2";
             const string CommandСonvertEurToRub = "3";
@@ -13,6 +11,8 @@
             const string CommandСonvertUsdToRub = "5";
             const string CommandСonvertUsdToEur = "6";
             const string CommandExite = "7";
+
+            Random random = new Random();
 
             double ratioRubToEur = 100;
             double ratioRubToUsd = 50;
